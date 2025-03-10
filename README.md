@@ -1,4 +1,4 @@
-<img src="https://www.wbscodingschool.com/wp-content/uploads/2024/04/UX-Designer_4.png" alt="" align="center" width="225" height="150"><h1 align="center">WBS WD-061</h1>
+<img src="" alt="" align="center" width="225" height="150"><h1 align="center">WBS WD-061</h1>
 
 <p align="center"><a href="#project-description">Project Description</a> - <a href="#key-features">Key Features</a> - <a href="#technology-stack">Tech Stack</a></p>
 
@@ -72,11 +72,11 @@ Create a navbar in both pages to navigate back and forth between the homepage an
 ## Resources
 
 - [TMDB API Documentation](https://developer.themoviedb.org/docs/getting-started)
-  [Pokemon API Documentation](https://pokeapi.co/)
-  [TailwindCSS Documentation](https://tailwindcss.com/docs/installation/using-vite)
-  [WBS Playground: DOM API](https://playground.wbscod.in/static/web-apis-dom/1)
-  [WBS Playground: Web Storage](https://playground.wbscod.in/static/web-apis-storage/1)
-  [WBS Playground: Fetch](https://playground.wbscod.in/static/web-apis-fetch/1)
+- [Pokemon API Documentation](https://pokeapi.co/)
+- [TailwindCSS Documentation](https://tailwindcss.com/docs/installation/using-vite)
+- [WBS Playground: DOM API](https://playground.wbscod.in/static/web-apis-dom/1)
+- [WBS Playground: Web Storage](https://playground.wbscod.in/static/web-apis-storage/1)
+- [WBS Playground: Fetch](https://playground.wbscod.in/static/web-apis-fetch/1)
 
 ### Explore the design and fonts With
 
@@ -93,4 +93,5 @@ https://www.youtube.com/watch?v=eLY5KSXcQ6c
 https://www.youtube.com/watch?v=zK-yy6C2Nck
 
 "https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+
 # Movie-or-Pokedex
