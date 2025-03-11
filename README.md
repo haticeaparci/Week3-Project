@@ -80,7 +80,7 @@ Create a navbar in both pages to navigate back and forth between the homepage an
 
 ### 📌 Explore the design and fonts With
  https://dribbble.com/shots/5611109--Pokemon
-
+- https://dribbble.com/shots/5611109--Pokemon
 - https://developers.google.com/fonts/docs/getting_started?hl=de
 - https://fonts.google.com/
 - https://www.w3schools.com/csS/css_font_google.asp
