@@ -1,4 +1,4 @@
-<img src="" alt="" align="center" width="225" height="150"><h1 align="center">WBS WD-061</h1>
+<img src="https://wordpress.startsteps.org/wp-content/uploads/2021/05/standard_colour_cutout_text_icon.png" alt="" align="center" width="225" height="150"><h1 align="center">WBS WD-061</h1>
 
 <p align="center"><a href="#project-description">Project Description</a> - <a href="#key-features">Key Features</a> - <a href="#technology-stack">Tech Stack</a></p>
 
