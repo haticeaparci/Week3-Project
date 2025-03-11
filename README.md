@@ -13,7 +13,7 @@ The project utilizes modern web technologies and best practices in full-stack de
 
 This project Movie diary / Pokedex including:
 
-📝 Option 1: Movie Diary using TMDB API
+- 📝 Option 1: Movie Diary using TMDB API
 
 Description: Create a movie diary using the TMDB API.
 
@@ -64,12 +64,12 @@ Create a navbar in both pages to navigate back and forth between the homepage an
 
 ## Tech Stack
 
-**Frontend**: Tailwind CSS, Fetch APIs, Web Storage , DOM,
-**Backend**:
-**Cloud & DevOps**:
-**Other**:
+- **Frontend**: Tailwind CSS, Fetch APIs, Web Storage , DOM,
+- **Backend**:
+- **Cloud & DevOps**:
+- **Other**:
 
-## Resources
+## 📌 Resources
 
 - [TMDB API Documentation](https://developer.themoviedb.org/docs/getting-started)
 - [Pokemon API Documentation](https://pokeapi.co/)
@@ -78,7 +78,7 @@ Create a navbar in both pages to navigate back and forth between the homepage an
 - [WBS Playground: Web Storage](https://playground.wbscod.in/static/web-apis-storage/1)
 - [WBS Playground: Fetch](https://playground.wbscod.in/static/web-apis-fetch/1)
 
-### Explore the design and fonts With
+### 📌 Explore the design and fonts With
 
 https://dribbble.com/shots/5611109--Pokemon
 
@@ -92,6 +92,6 @@ https://www.youtube.com/watch?v=ovS5qPWr2HU
 https://www.youtube.com/watch?v=eLY5KSXcQ6c
 https://www.youtube.com/watch?v=zK-yy6C2Nck
 
-"https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap
 
 # Movie-or-Pokedex
