@@ -80,18 +80,18 @@ Create a navbar in both pages to navigate back and forth between the homepage an
 
 ### 📌 Explore the design and fonts With
 
-https://dribbble.com/shots/5611109--Pokemon
+- https://dribbble.com/shots/5611109--Pokemon
 
-https://developers.google.com/fonts/docs/getting_started?hl=de
-https://fonts.google.com/
-https://www.w3schools.com/csS/css_font_google.asp
-https://www.geeksforgeeks.org/how-to-use-google-fonts-in-css/
-https://www.w3schools.com/w3css/w3css_fonts_google.asp
+- https://developers.google.com/fonts/docs/getting_started?hl=de
+- https://fonts.google.com/
+- https://www.w3schools.com/csS/css_font_google.asp
+- https://www.geeksforgeeks.org/how-to-use-google-fonts-in-css/
+- https://www.w3schools.com/w3css/w3css_fonts_google.asp
 
-https://www.youtube.com/watch?v=ovS5qPWr2HU
-https://www.youtube.com/watch?v=eLY5KSXcQ6c
-https://www.youtube.com/watch?v=zK-yy6C2Nck
+- https://www.youtube.com/watch?v=ovS5qPWr2HU
+- https://www.youtube.com/watch?v=eLY5KSXcQ6c
+- https://www.youtube.com/watch?v=zK-yy6C2Nck
 
-https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap
+- https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap
 
 # Movie-or-Pokedex
