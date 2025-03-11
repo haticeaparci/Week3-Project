@@ -78,8 +78,7 @@ Create a navbar in both pages to navigate back and forth between the homepage an
 - [WBS Playground: Web Storage](https://playground.wbscod.in/static/web-apis-storage/1)
 - [WBS Playground: Fetch](https://playground.wbscod.in/static/web-apis-fetch/1)
 
-### 📌 Explore the design and fonts With
- -[text](https://dribbble.com/shots/5611109--Pokemon)
+### 📌 Explore the design and fonts with
 - https://dribbble.com/shots/5611109--Pokemon
 - https://developers.google.com/fonts/docs/getting_started?hl=de
 - https://fonts.google.com/
