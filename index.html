@@ -16,25 +16,49 @@
   <body>
     <!--  FYI  -->
     <!-- Navbar ---@author------->
-    <nav></nav>
+    <nav class="nav flex justify-between items-center bg-gray-200 h-[50px]">
+      <!-- Home -------@author----->
+      <a class="active flex font-bold text-center pr-3 hover:bg-red-300" href="index.html">
+        <img
+          class="h-[50px] p-3"
+          src="./assets/pokeball.png"
+          alt="pokeball icon"
+        />
+        <h3 class="align-middle self-center">Pokédex</h3>
+      </a>
+
+      <!-- Searchbar -------@author----->
+      <div class="flex">
+        <input
+          class="border-2 border-gray-600 h-[30px] rounded-bl-lg rounded-tl-lg self-center"
+          type="text"
+          placeholder=" Search by name or ID"
+        />
+        <button type="submit" class="bg-gray-600 border-gray-600 border-2 rounded-br-lg rounded-tr-lg text-white  hover:border-gray-600 hover:border-l-red-500 hover:bg-red-500">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M7 19a8 8 9 100-18 9 9 0 000 18zm8-1l10 10"></path>
+          </svg>
+      </div>
+
+      <!-- Favorites -------@author----->
+      <a class="active flex font-bold pr-3 hover:bg-red-300" href="journal.html">
+        <img class="h-[50px] p-3" src="./assets/heart.png" alt="heart icon" />
+        <h3 class="align-middle self-center">Favorites</h3></a
+      >
+    </nav>
 
     <header></header>
 
     <main>
-      <!-- Homepage -----@author----->
-      <section id="section1">test</section>
-
-      <!-- Searchbar -------@author----->
-      <section id="section2"></section>
-
-      <!-- Favourites ------@author----->
-      <section id="section3"></section>
-
-      <!-- Journal ---------@author------>
-      <section id="section4"></section>
+      <!-- Homepage Grid-----@author----->
+      <section id="section1"></section>
     </main>
 
     <!-- footer ---------@author------>
-    <footer></footer>
+    <footer class="flex bg-gray-200 h-[50px] fixed bottom-0 w-full">
+      <p class="pl-3 self-center">
+      &copy PokéLove Inc. 💕
+      </p>  
+    </footer>
   </body>
 </html>

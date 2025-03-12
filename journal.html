@@ -3,8 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Journal</title>
-    <script defer src="journal.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap"
+      rel="stylesheet"
+    />
+    <title>Movie diary or Pokedex</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="main.js"></script>
   </head>
-  <body></body>
+  <body>
+    <!-- Navbar ---@author------->
+    <nav class="nav flex justify-between items-center bg-gray-200 h-[50px]">
+      <!-- Home -------@author----->
+      <a
+        class="active flex font-bold text-center pr-3 hover:bg-red-300"
+        href="index.html"
+      >
+        <img
+          class="h-[50px] p-3"
+          src="./assets/pokeball.png"
+          alt="pokeball icon"
+        />
+        <h3 class="align-middle self-center">Pokédex</h3>
+      </a>
+
+      <!-- Favorites -------@author----->
+      <a
+        class="active flex font-bold pr-3 hover:bg-red-300"
+        href="journal.html"
+      >
+        <img class="h-[50px] p-3" src="./assets/heart.png" alt="heart icon" />
+        <h3 class="align-middle self-center">Favorites</h3></a
+      >
+    </nav>
+    <main>
+      <!-- Favorites Grid -------@author----->
+    </main>
+    <footer class="flex bg-gray-200 h-[50px] fixed bottom-0 w-full">
+      <p class="pl-3 self-center">&copy PokéLove Inc. 💕</p>
+    </footer>
+  </body>
 </html>
