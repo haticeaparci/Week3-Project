@@ -105,11 +105,13 @@ function createPokemonCard(pokemon) {
 }
 
 async function loadPokemonList(append = false) {
+    console.log('Loading Pokemon list...');
     if (loading || !hasMorePokemon) return;
     loading = true;
 
     try {
         const startId = (currentPage - 1) * POKEMON_PER_PAGE + 1;
+        console.log(`Fetching Pokemon from ID ${startId}`);
         
         // Check if we've reached the maximum Pokemon ID
         if (startId > MAX_POKEMON_ID) {
@@ -134,6 +136,7 @@ async function loadPokemonList(append = false) {
         }
 
         const pokemons = await Promise.all(promises);
+        console.log(`Fetched ${pokemons.length} Pokemon`);
         
         if (!append) {
             pokemonList.innerHTML = '';
@@ -200,7 +203,7 @@ async function searchPokemon(query) {
     }
 }
 
-// Event Listeners
+/*// Event Listeners
 searchButton.addEventListener('click', () => {
     const query = searchInput.value.trim();
     if (query) {
@@ -220,9 +223,12 @@ searchInput.addEventListener('keypress', (e) => {
 closeModal.addEventListener('click', () => {
     searchModal.classList.add('hidden');
 });
-
+*/
 // Initialize
-document.addEventListener('DOMContentLoaded', () => loadPokemonList(false));
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, starting Pokemon fetch');
+    loadPokemonList(false);
+});
 
 // Improved infinite scroll with Intersection Observer
 const observerOptions = {
