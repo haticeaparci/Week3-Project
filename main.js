@@ -99,7 +99,7 @@ function createPokemonCard(pokemon) {
   // Set initial image
   favBtn.src = isFavorite ? imgStored : imgUnstored;
   favBtn.alt = 'favorites button';
-  favBtn.className = 'h-7 ml-4';
+  favBtn.className = 'h-7 ml-4 cursor-pointer';
 
   // Hover Effect
   favBtn.addEventListener('mouseenter', () => {
