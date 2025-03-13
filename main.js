@@ -18,24 +18,40 @@ let hasMorePokemon = true;
 let loadedPokemon = new Set(); // Track loaded Pokemon IDs
 let favorites = new Set(); // Using Set instead of Map for simpler storage
 
-//Favorites local storage
-const addToFavorites = favePokemon => {
-  const pokeArray = JSON.parse(localStorage.getItem('pokeArray')) || [];
-  const updatedFaves = [...pokeArray, favePokemon];
-  localStorage.setItem('pokeArray', JSON.stringify(updatedFaves));
+const addToFavorites = pokemon => {
+  let favorites = JSON.parse(localStorage.getItem('pokeArray')) || [];
+
+  // Create an object with necessary Pokémon details
+  const pokemonData = {
+    id: pokemon.id,
+    name: pokemon.name,
+    image:
+      pokemon.sprites.other['official-artwork'].front_default ||
+      pokemon.sprites.front_default,
+    type: pokemon.types.map(t => t.type.name).join(', '),
+    hp: pokemon.stats[0].base_stat,
+    attack: pokemon.stats[1].base_stat,
+    defense: pokemon.stats[2].base_stat,
+    speed: pokemon.stats[5].base_stat,
+  };
+
+  // Check if Pokémon is already in favorites
+  const exists = favorites.some(fav => fav.id === pokemon.id);
+
+  if (!exists) {
+    favorites.push(pokemonData);
+  } else {
+    favorites = favorites.filter(fav => fav.id !== pokemon.id); // Remove if already favorited
+  }
+
+  // Save back to localStorage
+  localStorage.setItem('pokeArray', JSON.stringify(favorites));
 };
 
 // Load favorites from localStorage on startup
 try {
-  const storedFavorites = localStorage.getItem('favorites');
-  if (storedFavorites) {
-    storedFavorites.split(',').forEach(id => {
-      const numId = parseInt(id, 10);
-      if (!isNaN(numId)) {
-        favorites.add(numId);
-      }
-    });
-  }
+  const storedFavorites = JSON.parse(localStorage.getItem('pokeArray')) || [];
+  favorites = new Set(storedFavorites.map(pokemon => pokemon.id)); // Store only the IDs in the Set
 } catch (error) {
   console.error('Error loading favorites:', error);
 }
@@ -85,11 +101,11 @@ function createPokemonCard(pokemon) {
 
   // Create Fav button
   const favBtn = document.createElement('img');
-  const favePokemonId = pokemon.id; // Assuming 'product' has an ID
+  const favePokemonId = pokemon.id; // Taking the pokemon ID
   let favorites = JSON.parse(localStorage.getItem('pokeArray')) || [];
 
   // Check if the Pokémon is already in favorites
-  let isFavorite = favorites.includes(favePokemonId);
+  let isFavorite = favorites.some(fav => fav.id === pokemon.id);
 
   // Define image sources
   const imgUnstored = 'assets/favheartunselected.png';
@@ -112,14 +128,25 @@ function createPokemonCard(pokemon) {
 
   // Click Event - Toggle Favorites
   favBtn.addEventListener('click', () => {
-    favorites = JSON.parse(localStorage.getItem('pokeArray')) || [];
+    let favorites = JSON.parse(localStorage.getItem('pokeArray')) || [];
 
     if (isFavorite) {
       // Remove from favorites
-      favorites = favorites.filter(id => id !== favePokemonId);
+      favorites = favorites.filter(pokemon => pokemon.id !== favePokemonId);
     } else {
-      // Add to favorites
-      favorites.push(favePokemonId);
+      // Add to favorites (store full Pokémon object)
+      favorites.push({
+        id: pokemon.id,
+        name: pokemon.name,
+        image:
+          pokemon.sprites.other['official-artwork'].front_default ||
+          pokemon.sprites.front_default,
+        type: pokemon.types.map(type => type.type.name).join(', '),
+        hp: pokemon.stats[0].base_stat,
+        attack: pokemon.stats[1].base_stat,
+        defense: pokemon.stats[2].base_stat,
+        speed: pokemon.stats[5].base_stat,
+      });
     }
 
     // Update localStorage
