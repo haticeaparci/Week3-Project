@@ -7,11 +7,19 @@
       href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap"
       rel="stylesheet"
     />
-    <title>Movie diary or Pokedex</title>
+    <title>Journal</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="main.js"></script>
+    <script defer src="journal.js"></script>
+    <style>
+      body {
+        font-family: 'Sniglet', cursive;
+      }
+    </style>
   </head>
-  <body>
+
+  <body
+    class="flex items-center justify-center text-center flex-col bg-gradient-to-r from-red-900 to-pink-400"
+  >
     <!-- Navbar ---@author------->
     <nav
       class="nav flex justify-between items-center bg-gray-200 h-[50px] sticky top-0 z-10 shadow-md mb-4"
@@ -35,11 +43,21 @@
         href="journal.html"
       >
         <img class="h-[50px] p-3" src="./assets/heart.png" alt="heart icon" />
-        <h3 class="align-middle self-center">Favorites</h3></a
-      >
+        <h3 class="align-middle self-center">Favorites</h3>
+      </a>
     </nav>
+
     <main>
-      <!-- Favorites Grid -------@author----->
+      <section>
+        <h1 class="text-4xl font-bold">Favorites</h1>
+        <p id="favoritesCount" class="text-xl mt-4">Total Favorites : 0</p>
+        <!-- TODO implement sum of list -->
+      </section>
+
+      <section
+        id="favoritesList"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4"
+      ></section>
     </main>
     <footer class="flex bg-gray-200 h-[50px] fixed bottom-0 w-full">
       <p class="pl-3 self-center">&copy PokéLove Inc. 💕</p>
