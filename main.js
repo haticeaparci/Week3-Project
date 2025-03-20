@@ -1,3 +1,7 @@
+import imgUnstored from './assets/favheartunselected.png';
+import imgHoveredUnstored from './assets/favhearthovered.png';
+import imgStored from './assets/favheartselected.png';
+
 // Constants
 const POKEMON_API_BASE_URL = 'https://pokeapi.co/api/v2';
 const POKEMON_PER_PAGE = 151;
