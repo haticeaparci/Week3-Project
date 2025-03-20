@@ -31,9 +31,22 @@ function createPokemonCard(pokemon) {
   name.className = 'text-xl font-bold capitalize mb-2';
   name.textContent = pokemon.name;
 
-  const statsP = document.createElement('p');
-  statsP.className = 'text-gray-600 mb-2';
-  statsP.textContent = `Stats: ${pokemon.stats}`;
+  const hp = document.createElement('p');
+  hp.className = 'text-gray-600 mb-2';
+  hp.textContent = `HP: ${pokemon.hp}`;
+
+  const attack = document.createElement('p');
+  attack.className = 'text-gray-600 mb-2';
+  attack.textContent = ` Attack ${pokemon.attack}`;
+
+  const defense = document.createElement('p');
+  defense.className = 'text-gray-600 mb-2';
+  defense.textContent = `Defense: ${pokemon.defense}`;
+
+  const speed = document.createElement('p');
+  speed.className = 'text-gray-600 mb-2';
+  speed.textContent = `Speed: ${pokemon.speed}`;
+  
 
   const notesDiv = document.createElement('div');
   notesDiv.className = 'mt-4';
@@ -67,7 +80,10 @@ function createPokemonCard(pokemon) {
   notesDiv.appendChild(saveButton);
   card.appendChild(img);
   card.appendChild(name);
-  card.appendChild(statsP);
+  card.appendChild(hp);
+  card.appendChild(attack);
+  card.appendChild(defense);
+  card.appendChild(speed);
   card.appendChild(notesDiv);
 
   return card;
