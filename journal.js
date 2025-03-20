@@ -34,14 +34,9 @@ function createPokemonCard(pokemon) {
   card.className =
     'pokemon bg-violet-300 rounded-lg shadow-lg p-4 transform hover:scale-105 transition-transform';
 
-  card.className =
-    'pokemon bg-violet-300 rounded-lg shadow-lg p-4 transform hover:scale-105 transition-transform';
-
   const img = document.createElement('img');
   img.src = pokemon.image;
   img.alt = pokemon.name;
-  img.className =
-    'w-44 opacity-75 transition-all duration-300 ease-in-out hover:opacity-100 hover:scale-125';
   img.className =
     'w-44 opacity-75 transition-all duration-300 ease-in-out hover:opacity-100 hover:scale-125';
 
@@ -89,20 +84,7 @@ function createPokemonCard(pokemon) {
     : 'No notes yet';
   notesDiv.appendChild(displayNotes);
 
-  saveButton.className = 'm-2 bg-blue-500 text-white p-2 rounded';
-
-  const displayNotes = document.createElement('p');
-  displayNotes.className = 'text-red-700 mt-2';
-  displayNotes.textContent = pokemon.note
-    ? `Notes: ${pokemon.note}`
-    : 'No notes yet';
-  notesDiv.appendChild(displayNotes);
-
   saveButton.addEventListener('click', () => {
-    const newNotes = notesTextarea.value;
-    saveNotes(pokemon.name, newNotes);
-    displayNotes.textContent = newNotes ? `${newNotes}` : 'No notes yet';
-    notesTextarea.value = '';
     const newNotes = notesTextarea.value;
     saveNotes(pokemon.name, newNotes);
     displayNotes.textContent = newNotes ? `${newNotes}` : 'No notes yet';
@@ -131,6 +113,4 @@ function saveNotes(pokemonName, notes) {
 }
 
 // Initialize
-document.addEventListener('DOMContentLoaded', loadFavorites);
-
 document.addEventListener('DOMContentLoaded', loadFavorites);
