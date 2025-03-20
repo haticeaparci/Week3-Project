@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- GitHub Repository   ---- @hatice 10.03.2025 -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+    <title>Pokedex</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer="" src="/my-react-app.c4775257.js"></script>
+  </head>
+
+  <body>
+    <!--  FYI  -->
+    <!-- Navbar ---@author------->
+    <nav class="nav flex justify-between items-center bg-gray-200 h-[50px] sticky top-0 z-10 shadow-md mb-4">
+      <!-- Home -------@author----->
+      <a class="active flex font-bold text-center pr-3 hover:bg-red-300" href="/index.html">
+        <img class="h-[50px] p-3" src="/pokeball.ab4ed11c.png" alt="pokeball icon">
+        <h3 class="align-middle self-center">Pokédex</h3>
+      </a>
+
+      <!-- Searchbar -------@author----->
+      <div class="flex">
+        <div class="flex border-2 border-gray-600 rounded-xl focus-within:border-red-500">
+
+          <input id="searchInput" class=" border-none focus:outline-none focus:ring-0 focus:border-transparent h-[30px] rounded-bl-xl rounded-tl-xl self-center text-center" type="text" placeholder="Search by name or ID">
+          <button id="searchButton" type="submit" class="bg-gray-600 rounded-br-lg rounded-tr-lg text-white  hover:border-gray-600 hover:border-l-red-500 hover:bg-red-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M7 19a8 8 9 100-18 9 9 0 000 18zm8-1l10 10"></path>
+            </svg>
+        </button></div>
+      </div>
+
+      <!-- Favorites -------@author----->
+      <a class="active flex font-bold pr-3 hover:bg-red-300" href="/journal.html">
+        <img class="h-[50px] p-3" src="/heart.ae6cd26f.png" alt="heart icon">
+        <h3 class="align-middle self-center">Favorites</h3></a>
+    </nav>
+
+    <header></header>
+
+    <main>
+      <!-- Homepage Grid-----@Lars---->
+      
+      <!-- Pokemon List -->
+    <div class="container mx-auto px-4 pb-8">
+      <div id="pokemonList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <!-- Pokemon cards will be dynamically inserted here -->
+      </div>
+    </div>
+
+      <!-- Search Results Modal -->
+    <div id="searchModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <div class="bg-white p-6 rounded-lg max-w-md w-full mx-4">
+          <div id="searchResults" class="mb-4">
+
+          <!-- Search results will be displayed here -->
+          </div>
+          <button id="closeModal" class="w-full bg-red-600 text-white py-2 rounded hover:bg-red-700 transition-colors">
+              Close
+          </button>
+      </div>
+    </div>
+
+    <!-- footer ---------@author------>
+     <!-- TODO padding marging  -->
+    <footer class="flex bg-gray-200 h-[50px] fixed bottom-0 w-full">    
+      <p class="pl-3 self-center">
+      &copy PokéLove Inc. 💕
+      </p>  
+    </footer>
+  </main><script src="/my-react-app.3464ddca.js"></script></body>
+</html>

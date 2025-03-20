@@ -4,5 +4,8 @@
   "scripts": {
     "dev": "parcel",
     "build": "parcel build"
+  },
+  "devDependencies": {
+    "svgo": "^3.3.2"
   }
 }
