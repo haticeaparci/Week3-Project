@@ -1,8 +1,17 @@
 const favoritesList = document.getElementById('favoritesList');
+const favoritesCount = document.getElementById("favoritesCount");
 
+
+ const updateFavoritesCount = ()=> {
+  const favorites = JSON.parse(localStorage.getItem("pokeArray"))|| [];
+  favoritesCount.textContent= favorites.length;
+  favoritesCount.className= " bg-blue-500 text-lg inline-block rounded"
+ };
 // Load favorites from localStorage
 function loadFavorites() {
   const favorites = JSON.parse(localStorage.getItem('pokeArray')) || [];
+  favoritesList.textContent='';
+
   if (favorites.length === 0) {
     const emptyMsg = document.createElement('p');
     emptyMsg.textContent = 'No favorites added yet.';
@@ -15,7 +24,16 @@ function loadFavorites() {
     const card = createPokemonCard(favorite);
     favoritesList.appendChild(card);
   });
+  updateFavoritesCount();
 }
+
+
+//favorites count 
+
+
+
+
+
 
 // Create Pokémon card with DOM
 function createPokemonCard(pokemon) {
@@ -32,19 +50,19 @@ function createPokemonCard(pokemon) {
   name.textContent = pokemon.name;
 
   const hp = document.createElement('p');
-  hp.className = 'text-gray-600 mb-2';
+  hp.className = 'text-gray-600 mb-2 text-sm';
   hp.textContent = `HP: ${pokemon.hp}`;
 
   const attack = document.createElement('p');
-  attack.className = 'text-gray-600 mb-2';
+  attack.className = 'text-gray-600 mb-2 text-sm';
   attack.textContent = ` Attack ${pokemon.attack}`;
 
   const defense = document.createElement('p');
-  defense.className = 'text-gray-600 mb-2';
+  defense.className = 'text-gray-600 mb-2 text-sm';
   defense.textContent = `Defense: ${pokemon.defense}`;
 
   const speed = document.createElement('p');
-  speed.className = 'text-gray-600 mb-2';
+  speed.className = 'text-gray-600 mb-2 text-sm';
   speed.textContent = `Speed: ${pokemon.speed}`;
   
 
