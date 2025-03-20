@@ -108,9 +108,12 @@ function createPokemonCard(pokemon) {
   let isFavorite = favorites.some(fav => fav.id === pokemon.id);
 
   // Define image sources
-  const imgUnstored = 'assets/favheartunselected.png';
-  const imgHoveredUnstored = 'assets/favhearthovered.png';
-  const imgStored = 'assets/favheartselected.png';
+  const imgUnstored = new URL('assets/favheartunselected.png', import.meta.url);
+  const imgHoveredUnstored = new URL(
+    'assets/favhearthovered.png',
+    import.meta.url
+  );
+  const imgStored = new URL('assets/favheartselected.png', import.meta.url);
 
   // Set initial image
   favBtn.src = isFavorite ? imgStored : imgUnstored;
