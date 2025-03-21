@@ -1,15 +1,16 @@
 const favoritesList = document.getElementById('favoritesList');
-const favoritesCount = document.getElementById('favoritesCount');
+const favoritesCount = document.getElementById("favoritesCount");
 
-const updateFavoritesCount = () => {
-  const favorites = JSON.parse(localStorage.getItem('pokeArray')) || [];
-  favoritesCount.textContent = favorites.length;
-  favoritesCount.className = ' bg-blue-500 text-lg inline-block rounded';
-};
+
+ const updateFavoritesCount = ()=> {
+  const favorites = JSON.parse(localStorage.getItem("pokeArray"))|| [];
+  favoritesCount.textContent= favorites.length;
+  favoritesCount.className= " bg-blue-500 text-lg inline-block rounded"
+ };
 // Load favorites from localStorage
 function loadFavorites() {
   const favorites = JSON.parse(localStorage.getItem('pokeArray')) || [];
-  favoritesList.textContent = '';
+  favoritesList.textContent='';
 
   if (favorites.length === 0) {
     const emptyMsg = document.createElement('p');
@@ -26,19 +27,23 @@ function loadFavorites() {
   updateFavoritesCount();
 }
 
-//favorites count
+
+//favorites count 
+
+
+
+
+
 
 // Create Pokémon card with DOM
 function createPokemonCard(pokemon) {
   const card = document.createElement('div');
-  card.className =
-    'pokemon bg-violet-300 rounded-lg shadow-lg p-4 transform hover:scale-105 transition-transform';
+  card.className = 'pokemon bg-violet-300 rounded-lg shadow-lg p-4 transform hover:scale-105 transition-transform';
 
   const img = document.createElement('img');
   img.src = pokemon.image;
   img.alt = pokemon.name;
-  img.className =
-    'w-44 opacity-75 transition-all duration-300 ease-in-out hover:opacity-100 hover:scale-125';
+  img.className = 'w-44 opacity-75 transition-all duration-300 ease-in-out hover:opacity-100 hover:scale-125';
 
   const name = document.createElement('h3');
   name.className = 'text-xl font-bold capitalize mb-2';
@@ -59,6 +64,7 @@ function createPokemonCard(pokemon) {
   const speed = document.createElement('p');
   speed.className = 'text-gray-600 mb-2 text-sm';
   speed.textContent = `Speed: ${pokemon.speed}`;
+  
 
   const notesDiv = document.createElement('div');
   notesDiv.className = 'mt-4';
@@ -79,16 +85,14 @@ function createPokemonCard(pokemon) {
 
   const displayNotes = document.createElement('p');
   displayNotes.className = 'text-red-700 mt-2';
-  displayNotes.textContent = pokemon.note
-    ? `Notes: ${pokemon.note}`
-    : 'No notes yet';
+  displayNotes.textContent = pokemon.note ? `Notes: ${pokemon.note}` : 'No notes yet';
   notesDiv.appendChild(displayNotes);
 
   saveButton.addEventListener('click', () => {
     const newNotes = notesTextarea.value;
     saveNotes(pokemon.name, newNotes);
     displayNotes.textContent = newNotes ? `${newNotes}` : 'No notes yet';
-    notesTextarea.value = '';
+    notesTextarea.value = ''; 
   });
 
   notesDiv.appendChild(saveButton);
